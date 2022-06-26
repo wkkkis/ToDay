@@ -296,6 +296,7 @@ body {
     background: transparent;
     border: none;
     transition: 0.5s;
+    cursor: pointer;
 }
 .hero-button a {
     padding: 23px 30px;
@@ -646,6 +647,7 @@ body {
     line-height: 140.61%;
     text-transform: uppercase;
     color: #fff;
+    cursor: pointer;
 }
 
 .footer-waves {
