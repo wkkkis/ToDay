@@ -175,6 +175,7 @@ body {
     text-align: center;
     color: #FFFFFF;
 }
+
 .subtitle {
     padding-top: 30.5%;
     font-weight: 400;
@@ -206,15 +207,28 @@ body {
     transform: translateY(-404px) rotate(180deg);
 }
 
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .hero-title {
-    position: relative;
+    position: absolute;
     font-weight: 700;
     font-size: 60px;
     line-height: 140.61%;
     text-align: center;
     letter-spacing: 0.105em;
     color: #FFFFFF;
-    z-index: 2;
+    z-index: 5;
+    top: -55px;
+}
+
+.hero-title_duble {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    text-align: center;
 }
 .hero-cards {
     display: flex;
@@ -222,8 +236,8 @@ body {
     gap: 8.2%;
     transform: translateY(-30px);
     position: relative;
-    z-index: 3;
 }
+
 .hero-cards div {
     position: relative;
     background: radial-gradient(112.46% 112.46% at -5.19% -6.06%, rgba(183, 242, 255, 0.432) 0%, rgba(13, 182, 219, 0.33) 40.1%, rgba(105, 228, 255, 0.072) 100%);
@@ -231,7 +245,13 @@ body {
     border-radius: 13px;
     transition: 0.4s;
     overflow: hidden;
+    z-index: 10;
 }
+
+.hero-cards div:nth-child(3) {
+    z-index: 0 !important;
+}
+
 .hero-cards div:hover {
     transform: translateY(20px);
 }
@@ -390,18 +410,43 @@ body {
     animation: animateBlob 4s ease-in-out infinite;
     animation-delay: 0.5s;
 }
+
+.case-cards-wrap {
+    overflow-x: hidden;
+    padding: 100px 0;
+    box-sizing: border-box;
+    margin-top: -100px;
+    margin-bottom: -100px;
+}
+
 .case-cards {
     display: flex;
     gap: 76px;
     width: calc(100% - 4.5454%);
     padding: 42px 0 35px 4.5454%;
-    margin-top: -4px;
-    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.prevbtn {
+    position: absolute;
+    transform: rotate(180deg);
+    top: calc(50% - 28.5px);
+    left: -72px;
+    z-index: 10;
+}
+
+.nextbtn {
+    position: absolute;
+    top: calc(50% - 28.5px);
+    right: -72px;
+    z-index: 10;
 }
 
 .case-card {
     padding: 41px 40px 31px 40px;
-    min-width: 286px;
+    box-sizing: border-box;
+    min-width: 283px;
     background: linear-gradient(108.13deg, rgba(13, 182, 219, 0.2544) 0%, rgba(115, 227, 251, 0.3286) 47.07%, rgba(255, 194, 249, 0.2491) 103.61%);
     box-shadow: 0px 0px 38px 3px rgba(0, 0, 0, 0.14);
     backdrop-filter: blur(12px);
@@ -492,7 +537,6 @@ body {
     gap: 20px;
 }
 
-
 .review-cards div {
     max-width: 562px;
     padding: 78px 57px 70px 51px;
@@ -500,6 +544,7 @@ body {
     backdrop-filter: blur(12px);
     border-radius: 13px;
 }
+
 .review-cards div h4 {
     margin-top: 18px;
     margin-bottom: 12px;
@@ -537,14 +582,21 @@ body {
     text-transform: uppercase;
     color: #fff;
 }
-
+.feedback-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(21px);
+    z-index: -5;
+}
 .feedback-form {
     position: relative;
     margin: 43px auto 0 auto;
     max-width: 525px;
     padding: 80px 88px;
     background: linear-gradient(288.1deg, rgba(255, 255, 255, 0.53) -12.64%, rgba(115, 227, 251, 0.53) 40.23%, rgba(255, 194, 249, 0.53) 115.03%);
-    backdrop-filter: blur(21px);
     border-radius: 32px;
     z-index: 10;
 }
